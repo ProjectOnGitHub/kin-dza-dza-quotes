@@ -7,7 +7,12 @@ const getRandomeQuote = () => {
     .then((data) => {
       let randomIndex = Math.floor(Math.random() * data.length);
       const quoteText = document.querySelector('.quotes__text');
-      quoteText.innerText = data[randomIndex].text;
+      const quoteImage = document.querySelector('.quotes__image');
+      const quoteAuthor = document.querySelector('.quotes__author');
+      quoteText.innerText = `"${data[randomIndex].text}"`;
+      quoteImage.src = `./assets/img/${data[randomIndex].image}.jpg`;
+      quoteImage.alt = data[randomIndex].author;
+      quoteAuthor.innerText = data[randomIndex].author;
     });
 }
 
