@@ -40,3 +40,7 @@
   text-transform: uppercase;
   margin: 0;
 }
+
+.main {
+  height: calc(100vh - 10px);
+}
