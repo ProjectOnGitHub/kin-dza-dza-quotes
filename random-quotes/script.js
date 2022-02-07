@@ -2,16 +2,17 @@ const url = "quotes.json";
 const quoteText = document.querySelector('.quotes__text');
 const quoteButton = document.querySelector('.quotes__button');
 
-const getData = () => {
+const getRandomeQuote = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      quoteText.innerText = data[Math.floor(Math.random() * data.length)].text;
+      let randomIndex = Math.floor(Math.random() * data.length);
+      quoteText.innerText = data[randomIndex].text;
     });
 }
-getData();
+getRandomeQuote();
 
-console.log(quoteButton)
 
-quoteButton.addEventListener('click', getData);
+
+quoteButton.addEventListener('click', getRandomeQuote);
 
