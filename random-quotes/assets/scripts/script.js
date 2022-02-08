@@ -1,5 +1,6 @@
 const url = "./assets/scripts/quotes.json";
 const quoteButton = document.querySelector('.quotes__button');
+const playButton = document.querySelector('.player__button');
 
 const getRandomeQuote = () => {
   fetch(url)
@@ -16,7 +17,26 @@ const getRandomeQuote = () => {
     });
 }
 
+const audio = new Audio();
+let isPlay = false;
+const playAudio = () => {
+  audio.src = "./assets/audio/kin-dza-dza.mp3";
+  isPlay = true;
+  audio.currentTime = 0;
+  audio.play();
+  playButton.classList.add('pause');
+}
+
+const pauseAudio = () => {
+  isPlay = false;
+  playButton.classList.remove('pause');
+  audio.pause();
+}
+
 getRandomeQuote();
 
 quoteButton.addEventListener('click', getRandomeQuote);
+
+playButton.addEventListener('click', () => (isPlay ? pauseAudio() : playAudio()));
+
 

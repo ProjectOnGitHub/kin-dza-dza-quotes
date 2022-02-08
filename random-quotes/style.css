@@ -29,6 +29,14 @@
   box-sizing: border-box;
 }
 
+.button {
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
 .link {
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -40,8 +48,40 @@
 .header {
   height: 90px;
   align-items: center;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+
+.player__button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(./assets/svg/play.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.3s ease-in-out;
+  filter: var(--color-light);
+  animation: pulse 1s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.player__button:hover {
+  transition: transform easy 0.1s;
+  transform: scale(1.1, 1.1);
+}
+
+.player__button.pause {
+  background-image: url(./assets/svg/pause.svg);
+  animation: none;
 }
 
 .header__title {
@@ -92,7 +132,6 @@
 
 .quotes__button {
   background-color: var(--color-dark);
-  box-sizing: border-box;
   color: var(--color-light);
   grid-area: button;
   width: 200px;
