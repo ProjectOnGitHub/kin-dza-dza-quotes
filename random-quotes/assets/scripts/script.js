@@ -26,6 +26,7 @@ const audio = new Audio();
 let isPlay = false;
 const playAudio = () => {
   audio.src = "./assets/audio/kin-dza-dza.mp3";
+  audio.loop = true
   isPlay = true;
   audio.currentTime = 0;
   audio.play();
