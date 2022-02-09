@@ -151,14 +151,17 @@
 }
 
 .quotes__image {
-  opacity: 0;
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
   box-sizing: border-box;
   border: 5px solid var(--color-light);
-  animation: displayImage 2.5s forwards;
+}
+
+.quotes__image.animation {
+  animation: displayImage 1s forwards;
+  opacity: 0;
 }
 
 @keyframes displayImage {

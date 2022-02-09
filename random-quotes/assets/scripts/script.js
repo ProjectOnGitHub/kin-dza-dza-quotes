@@ -4,7 +4,6 @@ const playButton = document.querySelector('.player__button');
 const langSwitcher = document.querySelector('.switcher');
 const langButtons = langSwitcher.querySelectorAll('.switcher__button');
 
-
 let lang = "Ru";
 
 const getRandomeQuote = () => {
@@ -18,13 +17,15 @@ const getRandomeQuote = () => {
 }
 
 const renderItem = (item) => {
-  const quoteText = document.querySelector('.quotes__text');
   const quoteImage = document.querySelector('.quotes__image');
+  const quoteText = document.querySelector('.quotes__text');
   const quoteAuthor = document.querySelector('.quotes__author');
-  quoteText.innerText = `"${item[`text${lang}`]}"`;
   quoteImage.src = `./assets/img/${item.image}.jpg`;
   quoteImage.alt = `${item[`author${lang}`]}`;
+  quoteText.innerText = `"${item[`text${lang}`]}"`;
   quoteAuthor.innerText = `${item[`author${lang}`]}`;
+  quoteImage.classList.add('animation');
+  setTimeout(() => quoteImage.classList.remove('animation'), 2000)
 }
 
 const audio = new Audio();
