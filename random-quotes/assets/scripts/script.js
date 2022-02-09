@@ -12,14 +12,19 @@ const getRandomeQuote = () => {
     .then((res) => res.json())
     .then((data) => {
       let randomIndex = Math.floor(Math.random() * data.length);
-      const quoteText = document.querySelector('.quotes__text');
-      const quoteImage = document.querySelector('.quotes__image');
-      const quoteAuthor = document.querySelector('.quotes__author');
-      quoteText.innerText = `"${data[randomIndex][`text${lang}`]}"`;
-      quoteImage.src = `./assets/img/${data[randomIndex].image}.jpg`;
-      quoteImage.alt = `${data[randomIndex][`author${lang}`]}`;
-      quoteAuthor.innerText = `${data[randomIndex][`author${lang}`]}`;
+      let randomeQuote = data[randomIndex];
+      renderItem(randomeQuote)
     });
+}
+
+const renderItem = (item) => {
+  const quoteText = document.querySelector('.quotes__text');
+  const quoteImage = document.querySelector('.quotes__image');
+  const quoteAuthor = document.querySelector('.quotes__author');
+  quoteText.innerText = `"${item[`text${lang}`]}"`;
+  quoteImage.src = `./assets/img/${item.image}.jpg`;
+  quoteImage.alt = `${item[`author${lang}`]}`;
+  quoteAuthor.innerText = `${item[`author${lang}`]}`;
 }
 
 const audio = new Audio();
@@ -50,7 +55,6 @@ const switchLanguage = (e) => {
 getRandomeQuote();
 
 quoteButton.addEventListener('click', getRandomeQuote);
-
 playButton.addEventListener('click', () => (isPlay ? pauseAudio() : playAudio()));
 langSwitcher.addEventListener('click', switchLanguage);
 
