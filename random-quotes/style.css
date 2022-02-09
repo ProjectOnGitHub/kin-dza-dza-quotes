@@ -111,6 +111,7 @@
 
 @media screen and (max-width: 720px) {
   .main {
+    padding-bottom: 20px;
     align-items: flex-start;
   }
 }
