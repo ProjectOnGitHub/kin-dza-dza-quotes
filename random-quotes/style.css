@@ -171,6 +171,7 @@
   margin: 0;
   width: 100%;
   font-size: 18px;
+  line-height: 1.5;
 }
 .quotes__author {
   font-size: 30px;
