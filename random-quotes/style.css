@@ -264,8 +264,6 @@
 @media screen and (max-width: 480px) {
   .footer {
     font-size: 14px;
-    grid-template-columns: 1fr;
-    justify-items: center;
   }
 }
 
@@ -282,4 +280,11 @@
 
 .footer__link:hover {
   text-decoration: underline;
+}
+
+.footer__logo {
+  width: 80px;
+  height: auto;
+  -webkit-filter: drop-shadow(0px 1px 1px var(--color-light));
+  filter: drop-shadow(0px 1px 1px var(--color-light));
 }
