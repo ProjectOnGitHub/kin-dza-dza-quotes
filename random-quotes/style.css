@@ -128,7 +128,7 @@
   .main {
     align-items: flex-start;
 
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 
@@ -158,6 +158,12 @@
       'buttons';
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .quotes {
+    gap: 10px;
   }
 }
 
@@ -200,8 +206,8 @@
 
 @media screen and (max-width: 380px) {
   .quotes__image {
-    width: 275px;
-    height: 275px;
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -215,8 +221,15 @@
   grid-area: text;
 }
 
+@media screen and (max-width: 720px) {
+  .quotes__text {
+    font-size: 14px;
+  }
+}
+
 .quotes__author {
   margin: 0;
+  line-height: 1;
 
   font-size: 30px;
 }
