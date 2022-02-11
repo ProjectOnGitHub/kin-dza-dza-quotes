@@ -35,6 +35,7 @@ const playAudio = () => {
   audio.loop = true
   isPlay = true;
   audio.currentTime = 0;
+  audio.volume = 0.2;
   audio.play();
   playButton.classList.add('pause');
 }
