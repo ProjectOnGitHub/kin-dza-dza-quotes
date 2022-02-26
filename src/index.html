@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
     <title>Цитаты</title>
   </head>
   <body>
@@ -20,14 +18,13 @@
         <section class="quotes">
           <figure class="quotes__figure">
             <img
-              src="./assets/img/background.jpg"
+              src="<%=require('./images/background.jpg')%>"
               alt="Фон"
               class="quotes__image"
             />
             <figcaption class="quotes__author"></figcaption>
           </figure>
           <blockquote class="quotes__text"></blockquote>
-
           <div class="quotes__buttons">
             <ul class="switcher list">
               <li class="switcher__item">
@@ -62,6 +59,5 @@
         </p>
       </footer>
     </div>
-    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-@import url('./assets/normalize.css');
-@import url('./assets/fonts.css');
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts.css");
 
 .root {
   display: grid;
@@ -11,7 +11,7 @@
   color: var(--color-light);
   background-color: var(--color-dark);
 
-  font: normal 20px/2 'Inter', Arial, sans-serif;
+  font: normal 20px/2 "Inter", Arial, sans-serif;
 
   --color-dark: #323131;
   --color-light: #fff;
@@ -78,7 +78,7 @@
   animation: pulse 1s ease-in-out infinite alternate;
 
   border-radius: 50%;
-  background-image: url(./assets/svg/play.svg);
+  background-image: url(../svg/play.svg);
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -101,7 +101,7 @@
 .player__button.pause {
   animation: none;
 
-  background-image: url(./assets/svg/pause.svg);
+  background-image: url(../svg/pause.svg);
 }
 
 .header__title {
@@ -140,8 +140,8 @@
 
   gap: 20px 30px;
   grid-template-areas:
-    'image text'
-    'image buttons';
+    "image text"
+    "image buttons";
   grid-template-columns: 300px 1fr;
   justify-items: center;
 }
@@ -153,9 +153,9 @@
     height: 100%;
 
     grid-template-areas:
-      'image'
-      'text'
-      'buttons';
+      "image"
+      "text"
+      "buttons";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
