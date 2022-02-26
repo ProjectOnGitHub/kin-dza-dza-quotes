@@ -1,8 +1,6 @@
 import './styles/index.css';
-
+import song from './audio/kin-dza-dza.mp3';
 import quotes from './utils/quotes';
-
-const song = require('./audio/kin-dza-dza.mp3');
 
 const quoteButton = document.querySelector('.quotes__button');
 const playButton = document.querySelector('.player__button');

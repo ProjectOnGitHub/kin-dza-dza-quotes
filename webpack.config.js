@@ -28,12 +28,8 @@ module.exports = {
       },
       {
         // регулярное выражение, которое ищет все файлы с такими расширениями
-        test: /\.(png|ico|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.(png|ico|svg|jpg|gif|woff(2)?|eot|ttf|otf|mp3)$/,
         type: 'asset/resource',
-      },
-      {
-        test: /\.mp3$/,
-        loader: 'file-loader',
       },
       {
         // применять это правило только к CSS-файлам
